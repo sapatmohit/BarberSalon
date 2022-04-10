@@ -1,0 +1,3374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+#preloader {
+    background: #000 url(../img/circle-loader-gif-2.gif) no-repeat center center;
+    background-size: 15%;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+}
+
+/*****************
+home section
+******************/
+
+#banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), #009688), url(../img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.logo {
+    width: 185px;
+    position: absolute;
+    top: 6%;
+    left: 10%;
+}
+
+.banner-text {
+    text-align: center;
+    color: #fff;
+    padding-top: 180px;
+    text-transform: capitalize;
+}
+
+.banner-text h1 {
+    font-size: 130px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.banner-text p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+.banner-btn {
+    text-transform: capitalize;
+    margin: 70px auto 0;
+}
+
+.banner-btn a {
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: #fff;
+    border: 0.5px solid #fff;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+}
+
+.banner-btn a span {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.banner-btn a:hover span {
+    width: 100%;
+}
+
+.banner-btn a:hover {
+    color: #000;
+}
+
+#sideNav {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: #009688;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 50px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#menu-btn {
+    width: 50px;
+    height: 50px;
+    background: #009688;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#menu-btn img {
+    width: 20px;
+    height: auto;
+    margin-top: 15px;
+}
+
+
+/*****************
+popup form 
+******************/
+
+.popup {
+    z-index: 3;
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 380px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+}
+
+.popup.active {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+}
+
+.popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.popup .form h2 {
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+}
+
+.popup .form .form-element {
+    margin: 15px 0px;
+}
+
+.popup .form .form-element label {
+    font-size: 14px;
+    color: #222;
+}
+
+.popup .form .form-element input[type="text"],
+.popup .form .form-element input[type="password"],
+.popup .form .form-element input[type="datetime-local"] {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.popup .form .form-element input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.popup .form .form-element button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.popup .form .form-element a {
+    display: block;
+    text-align: right;
+    font-size: 15px;
+    color: #1a79ca;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/***************
+ Features 
+ ****************/
+
+#features {
+    width: 100%;
+    padding: 70px 0;
+}
+
+.title-text {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.title-text p {
+    text-transform: uppercase;
+    margin: auto;
+    font-size: 20px;
+    color: #009688;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+.title-text p::after {
+    content: '';
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#019587, #fff);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.title-text h1 {
+    text-transform: capitalize;
+    font-size: 50px;
+}
+
+.feature-box {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.features {
+    flex-basis: 50%;
+}
+
+.features-img {
+    flex-basis: 50%;
+    margin: auto;
+}
+
+.features-img img {
+    width: 70%;
+    border-radius: 10px;
+}
+
+.features h1 {
+    text-transform: capitalize;
+    text-align: left;
+    margin: 10px;
+    font-weight: 100;
+    color: #009688;
+}
+
+.features-desc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.features-icon .fas,
+.features-icon .far {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 8px;
+    color: #009688;
+    border: 1px solid #009688;
+}
+
+.features-text p {
+    padding: 0 20px;
+    text-align: initial;
+}
+
+/***************
+services
+***************/
+
+#service {
+    width: 100%;
+    padding: 70px 0;
+    background: #efefef;
+}
+
+.service-box {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.single-service {
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+
+.single-service img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #009688);
+    opacity: 0;
+    transition: 1s;
+}
+
+.single-service:hover .overlay {
+    opacity: 1;
+}
+
+.service-desc {
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transition: 1s;
+    transform: translateX(-50%);
+}
+
+hr {
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+
+.service-desc h3 {
+    text-transform: capitalize;
+}
+
+.service-desc p {
+    font-size: 14px;
+}
+
+.single-service:hover .service-desc {
+    bottom: 40%;
+    opacity: 1;
+}
+
+/******************
+testimonials
+*******************/
+
+#testimonial {
+    width: 100%;
+    padding: 70px 0;
+}
+
+.testimonial-row {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.testimonial-col {
+    flex-basis: 28%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 30px #00968814;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.testimonial-col p {
+    font-size: 14px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.user img {
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+
+.user-info h4 {
+    text-transform: uppercase;
+}
+
+.user-info .fab {
+    margin-left: 10px;
+    color: #27c0ff;
+    font-size: 20px;
+}
+
+.user-info small {
+    color: #009688;
+}
+
+.testimonial-col:hover {
+    transform: translateY(-7px);
+}
+
+/*****************
+footer
+******************/
+
+#footer {
+    padding: 100px 0 20px;
+    background: #efefef;
+    position: relative;
+}
+
+.footer-row {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-row h1 {
+    text-transform: capitalize;
+    margin: 10px 0;
+}
+
+.footer-row p {
+    line-height: 35px;
+}
+
+.footer-left .far,
+.footer-right .fas {
+    font-size: 20px;
+    color: #009688;
+    margin: 10px;
+}
+
+.footer-img {
+    max-width: 370px;
+    opacity: 0.2;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.social-links {
+    text-align: center;
+}
+
+.social-links .fab {
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    border: 1px solid #009688;
+    margin: 40px 5px 0;
+    color: #009688;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.social-links .fab:hover {
+    background: #009688;
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.social-links p {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/********************
+Media Queries
+********************/
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .logo {
+        width: 325px;
+    }
+
+    .banner-text {
+        padding-top: 400px;
+    }
+
+    .banner-text h1 {
+        font-size: 175px;
+    }
+
+    .banner-text p {
+        font-size: 40px;
+    }
+
+    .banner-btn {
+        font-size: 35px;
+    }
+
+    .banner-btn a {
+        width: 225px;
+    }
+
+    .popup {
+        width: 525px;
+        height: 650px;
+    }
+
+    .form-element {
+        width: 450px;
+    }
+
+    .popup .form h2 {
+        font-size: 35px;
+    }
+
+    .popup .form .form-element label {
+        font-size: 20px;
+    }
+
+    .popup .form .form-element input[type="text"],
+    .popup .form .form-element input[type="password"],
+    .popup .form .form-element input[type="datetime-local"] {
+        font-size: 25px;
+    }
+
+    .popup .form .form-element button {
+        height: 60px;
+        padding: 5px 0;
+        font-size: 30px;
+    }
+
+    .popup .close-btn {
+        font-size: 50px;
+        top: 15px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 25px;
+    }
+
+    #menu-btn {
+        border-radius: 3px;
+        width: 70px;
+        height: 70px;
+        top: 40px;
+        right: 50px;
+    }
+
+    #menu-btn img {
+        width: 35px;
+        margin-top: 17px;
+    }
+
+    nav {
+        padding-top: 80px;
+        font-size: 30px;
+    }
+
+    .title-text p {
+        font-size: 30px;
+    }
+
+    .title-text h1 {
+        font-size: 60px;
+    }
+
+    .features {
+        font-size: 22px;
+    }
+
+    .features-icon .fas,
+    .features-icon .far {
+        width: 60px;
+        height: 60px;
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 30%;
+    }
+
+    .service-desc h3 {
+        font-size: 30px;
+    }
+
+    .service-desc p {
+        font-size: 22px;
+    }
+
+    .user img {
+        width: 80px;
+    }
+
+    .user-info h4 {
+        font-size: 25px;
+    }
+
+    .user-info small {
+        font-size: 20px;
+    }
+
+    .user-info .fab {
+        font-size: 25px;
+    }
+
+    .testimonial-col p {
+        font-size: 20px;
+    }
+
+    .footer-img {
+        top: 30%;
+    }
+
+    .footer-row h1 {
+        font-size: 40px;
+    }
+
+    .footer-row p {
+        font-size: 27px;
+    }
+
+    .footer-row .far,
+    .footer-row .fas {
+        font-size: 35px;
+    }
+
+    .social-links .fab {
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        font-size: 35px;
+    }
+
+    .social-links p {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+
+    .logo {
+        width: 325px;
+    }
+
+    .banner-text {
+        padding-top: 400px;
+    }
+
+    .banner-text h1 {
+        font-size: 175px;
+    }
+
+    .banner-text p {
+        font-size: 40px;
+    }
+
+    .banner-btn {
+        font-size: 35px;
+    }
+
+    .banner-btn a {
+        width: 225px;
+    }
+
+    .popup {
+        width: 525px;
+        height: 650px;
+    }
+
+    .form-element {
+        width: 450px;
+    }
+
+    .popup .form h2 {
+        font-size: 35px;
+    }
+
+    .popup .form .form-element label {
+        font-size: 20px;
+    }
+
+    .popup .form .form-element input[type="text"],
+    .popup .form .form-element input[type="password"],
+    .popup .form .form-element input[type="datetime-local"] {
+        font-size: 25px;
+    }
+
+    .popup .form .form-element button {
+        height: 60px;
+        padding: 5px 0;
+        font-size: 30px;
+    }
+
+    .popup .close-btn {
+        font-size: 50px;
+        top: 15px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 25px;
+    }
+
+    #menu-btn {
+        border-radius: 3px;
+        width: 70px;
+        height: 70px;
+        top: 40px;
+        right: 50px;
+    }
+
+    #menu-btn img {
+        width: 35px;
+        margin-top: 17px;
+    }
+
+    nav {
+        padding-top: 80px;
+        font-size: 30px;
+    }
+
+    .title-text p {
+        font-size: 30px;
+    }
+
+    .title-text h1 {
+        font-size: 60px;
+    }
+
+    .features {
+        font-size: 22px;
+    }
+
+    .features-icon .fas,
+    .features-icon .far {
+        width: 60px;
+        height: 60px;
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 30%;
+    }
+
+    .service-desc h3 {
+        font-size: 30px;
+    }
+
+    .service-desc p {
+        font-size: 22px;
+    }
+
+    .user img {
+        width: 80px;
+    }
+
+    .user-info h4 {
+        font-size: 25px;
+    }
+
+    .user-info small {
+        font-size: 20px;
+    }
+
+    .user-info .fab {
+        font-size: 25px;
+    }
+
+    .testimonial-col p {
+        font-size: 20px;
+    }
+
+    .footer-img {
+        top: 30%;
+    }
+
+    .footer-row h1 {
+        font-size: 40px;
+    }
+
+    .footer-row p {
+        font-size: 27px;
+    }
+
+    .footer-row .far,
+    .footer-row .fas {
+        font-size: 35px;
+    }
+
+    .social-links .fab {
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        font-size: 35px;
+    }
+
+    .social-links p {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .logo {
+        width: 300px;
+        top: 4%;
+    }
+
+    .banner-text {
+        padding-top: 470px;
+    }
+
+    .banner-text h1 {
+        font-size: 150px;
+    }
+
+    .banner-text p {
+        font-size: 35px;
+    }
+
+    .banner-btn a {
+        font-size: 30px;
+        width: 190px;
+    }
+
+    #menu-btn {
+        width: 75px;
+        height: 75px;
+        right: 50px;
+        top: 40px;
+        border-radius: 7px
+    }
+
+    #menu-btn img {
+        width: 45px;
+    }
+
+    #sideNav {
+        font-size: 35px;
+        padding-top: 85px;
+    }
+
+    .title-text p {
+        font-size: 30px;
+    }
+
+    .title-text h1 {
+        font-size: 55px;
+    }
+
+    .features {
+        font-size: 125%;
+    }
+
+    .features-icon .fas,
+    .features-icon .far {
+        width: 70px;
+        height: 70px;
+        font-size: 50px;
+        line-height: 70px;
+    }
+
+    .features-img img {
+        width: 100%;
+    }
+
+    .single-service {
+        flex-basis: 80%;
+    }
+
+    .service-desc h3 {
+        font-size: 35px;
+    }
+
+    .service-desc p {
+        font-size: 25px;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 25%;
+    }
+
+    .testimonial-col {
+        flex-basis: 100%;
+    }
+
+    .user img {
+        width: 100px;
+    }
+
+    .user-info h4 {
+        font-size: 35px;
+    }
+
+    .user-info small {
+        font-size: 30px;
+    }
+
+    .user-info .fab {
+        font-size: 40px;
+    }
+
+    .testimonial-col p {
+        font-size: 25px;
+    }
+
+    .footer-img {
+        top: 33%;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-basis: 50%;
+        padding: 0;
+    }
+
+    .footer-row {
+        width: 90%;
+    }
+
+    .footer-row h1 {
+        font-size: 35px;
+    }
+
+    .footer-row p {
+        font-size: 22px;
+    }
+
+    .social-links .fab {
+        height: 50px;
+        width: 50px;
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    .social-links p {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .logo {
+        width: 275px;
+        top: 4%;
+    }
+
+    .banner-text {
+        padding-top: 400px;
+    }
+
+    .banner-text p {
+        font-size: 35px;
+    }
+
+    .banner-btn a {
+        font-size: 25px;
+        width: 160px;
+    }
+
+    .popup {
+        width: 525px;
+        height: 650px;
+    }
+
+    .form-element {
+        width: 450px;
+    }
+
+    .popup .form h2 {
+        font-size: 35px;
+    }
+
+    .popup .form .form-element label {
+        font-size: 20px;
+    }
+
+    .popup .form .form-element input[type="text"],
+    .popup .form .form-element input[type="password"],
+    .popup .form .form-element input[type="datetime-local"] {
+        font-size: 25px;
+    }
+
+    .popup .form .form-element button {
+        height: 60px;
+        padding: 5px 0;
+        font-size: 30px;
+    }
+
+    .popup .close-btn {
+        font-size: 50px;
+        top: 15px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 25px;
+    }
+
+    #menu-btn {
+        width: 60px;
+        height: 60px;
+        top: 30px;
+        right: 30px;
+    }
+
+    #menu-btn img {
+        width: 30px;
+    }
+
+    #sideNav {
+        padding-top: 80px;
+        font-size: 30px;
+    }
+
+    .title-text p {
+        font-size: 30px;
+    }
+
+    .title-text h1 {
+        font-size: 45px;
+    }
+
+    .features {
+        font-size: 145%;
+        flex-basis: 100%;
+    }
+
+    .features-icon .fas,
+    .features-icon .far {
+        width: 65px;
+        height: 65px;
+        font-size: 40px;
+        line-height: 65px;
+    }
+
+    .features-img {
+        flex-basis: 100%;
+    }
+
+    .single-service {
+        flex-basis: 80%;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 25%;
+    }
+
+    .service-desc h3 {
+        font-size: 30px;
+    }
+
+    .service-desc p {
+        font-size: 22px;
+    }
+
+    .testimonial-col {
+        flex-basis: 100%;
+    }
+
+    .user img {
+        width: 90px;
+    }
+
+    .user-info h4 {
+        font-size: 30px;
+    }
+
+    .user-info small {
+        font-size: 25px;
+    }
+
+    .user-info .fab {
+        font-size: 35px;
+    }
+
+    .testimonial-col p {
+        font-size: 20px;
+    }
+
+    .footer-img {
+        top: 25%;
+    }
+
+    .footer-row {
+        width: 90%;
+    }
+
+    .footer-row h1 {
+        font-size: 30px;
+    }
+
+    .footer-row p {
+        font-size: 25px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-basis: 100%;
+    }
+
+    .footer-left .far,
+    .footer-right .fas {
+        font-size: 30px;
+    }
+
+    .social-links .fab {
+        height: 55px;
+        width: 55px;
+        font-size: 35px;
+        line-height: 55px;
+    }
+
+    .social-links p {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+    .logo {
+        width: 275px;
+        top: 4%;
+    }
+
+    .banner-text {
+        padding-top: 350px;
+    }
+
+    .banner-text p {
+        font-size: 30px;
+    }
+
+    .banner-btn a {
+        font-size: 25px;
+        width: 160px;
+    }
+
+    .popup {
+        width: 525px;
+        height: 650px;
+    }
+
+    .form-element {
+        width: 450px;
+    }
+
+    .popup .form h2 {
+        font-size: 35px;
+    }
+
+    .popup .form .form-element label {
+        font-size: 20px;
+    }
+
+    .popup .form .form-element input[type="text"],
+    .popup .form .form-element input[type="password"],
+    .popup .form .form-element input[type="datetime-local"] {
+        font-size: 25px;
+    }
+
+    .popup .form .form-element button {
+        height: 60px;
+        padding: 5px 0;
+        font-size: 30px;
+    }
+
+    .popup .close-btn {
+        font-size: 50px;
+        top: 15px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 25px;
+    }
+
+    #menu-btn {
+        width: 60px;
+        height: 60px;
+        top: 30px;
+        right: 30px;
+    }
+
+    #menu-btn img {
+        width: 30px;
+    }
+
+    #sideNav {
+        padding-top: 80px;
+        font-size: 30px;
+    }
+
+    .title-text p {
+        font-size: 30px;
+    }
+
+    .title-text h1 {
+        font-size: 45px;
+    }
+
+    .features {
+        font-size: 145%;
+        flex-basis: 100%;
+    }
+
+    .features-icon .fas,
+    .features-icon .far {
+        width: 65px;
+        height: 65px;
+        font-size: 40px;
+        line-height: 65px;
+    }
+
+    .features-img {
+        flex-basis: 100%;
+    }
+
+    .single-service {
+        flex-basis: 80%;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 25%;
+    }
+
+    .service-desc h3 {
+        font-size: 30px;
+    }
+
+    .service-desc p {
+        font-size: 22px;
+    }
+
+    .testimonial-col {
+        flex-basis: 100%;
+    }
+
+    .user img {
+        width: 90px;
+    }
+
+    .user-info h4 {
+        font-size: 30px;
+    }
+
+    .user-info small {
+        font-size: 25px;
+    }
+
+    .user-info .fab {
+        font-size: 35px;
+    }
+
+    .testimonial-col p {
+        font-size: 20px;
+    }
+
+    .footer-img {
+        top: 23%;
+    }
+
+    .footer-row {
+        width: 90%;
+    }
+
+    .footer-row h1 {
+        font-size: 30px;
+    }
+
+    .footer-row p {
+        font-size: 25px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-basis: 100%;
+    }
+
+    .footer-left .far,
+    .footer-right .fas {
+        font-size: 30px;
+    }
+
+    .social-links .fab {
+        height: 55px;
+        width: 55px;
+        font-size: 35px;
+        line-height: 55px;
+    }
+
+    .social-links p {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .logo {
+        width: 275px;
+        top: 4%;
+    }
+
+    .banner-text {
+        padding-top: 350px;
+    }
+
+    .banner-text p {
+        font-size: 30px;
+    }
+
+    .banner-btn a {
+        font-size: 25px;
+        width: 160px;
+    }
+
+    .popup {
+        width: 525px;
+        height: 650px;
+    }
+
+    .form-element {
+        width: 450px;
+    }
+
+    .popup .form h2 {
+        font-size: 35px;
+    }
+
+    .popup .form .form-element label {
+        font-size: 20px;
+    }
+
+    .popup .form .form-element input[type="text"],
+    .popup .form .form-element input[type="password"],
+    .popup .form .form-element input[type="datetime-local"] {
+        font-size: 25px;
+    }
+
+    .popup .form .form-element button {
+        height: 60px;
+        padding: 5px 0;
+        font-size: 30px;
+    }
+
+    .popup .close-btn {
+        font-size: 50px;
+        top: 15px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 25px;
+    }
+
+    #menu-btn {
+        width: 60px;
+        height: 60px;
+        top: 30px;
+        right: 30px;
+    }
+
+    #menu-btn img {
+        width: 30px;
+    }
+
+    #sideNav {
+        padding-top: 80px;
+        font-size: 30px;
+    }
+
+    .title-text p {
+        font-size: 30px;
+    }
+
+    .title-text h1 {
+        font-size: 45px;
+    }
+
+    .features {
+        font-size: 145%;
+        flex-basis: 100%;
+    }
+
+    .features-icon .fas,
+    .features-icon .far {
+        width: 65px;
+        height: 65px;
+        font-size: 40px;
+        line-height: 65px;
+    }
+
+    .features-img {
+        flex-basis: 100%;
+    }
+
+    .single-service {
+        flex-basis: 80%;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 25%;
+    }
+
+    .service-desc h3 {
+        font-size: 30px;
+    }
+
+    .service-desc p {
+        font-size: 22px;
+    }
+
+    .testimonial-col {
+        flex-basis: 100%;
+    }
+
+    .user img {
+        width: 90px;
+    }
+
+    .user-info h4 {
+        font-size: 30px;
+    }
+
+    .user-info small {
+        font-size: 25px;
+    }
+
+    .user-info .fab {
+        font-size: 35px;
+    }
+
+    .testimonial-col p {
+        font-size: 20px;
+    }
+
+    .footer-img {
+        top: 23%;
+    }
+
+    .footer-row {
+        width: 90%;
+    }
+
+    .footer-row h1 {
+        font-size: 30px;
+    }
+
+    .footer-row p {
+        font-size: 25px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-basis: 100%;
+    }
+
+    .footer-left .far,
+    .footer-right .fas {
+        font-size: 30px;
+    }
+
+    .social-links .fab {
+        height: 55px;
+        width: 55px;
+        font-size: 35px;
+        line-height: 55px;
+    }
+
+    .social-links p {
+        font-size: 25px;
+    }
+}
+
+@media screen and (device-width: 480px) and (device-height: 800px) {
+
+    .logo {
+        top: 4%;
+    }
+
+    .banner-text {
+        padding-top: 250px;
+    }
+
+    .banner-text h1 {
+        font-size: 90px;
+    }
+
+    .banner-btn a {
+        font-size: 20px;
+        width: 140px;
+    }
+
+    #menu-btn {
+        width: 55px;
+        height: 55px;
+        top: 25px;
+        right: 25px;
+    }
+
+    #menu-btn img {
+        width: 25px;
+    }
+
+    #sideNav {
+        padding-top: 75px;
+        font-size: 25px;
+    }
+
+    .title-text p {
+        font-size: 25px;
+    }
+
+    .title-text h1 {
+        font-size: 38px;
+    }
+
+    .features {
+        font-size: 100%;
+        flex-basis: 100%;
+    }
+
+    .features-icon .fas,
+    .features-icon .far {
+        width: 60px;
+        height: 60px;
+        font-size: 35px;
+        line-height: 60px;
+    }
+
+    .features-img {
+        flex-basis: 100%;
+    }
+
+    .single-service {
+        flex-basis: 80%;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 18%;
+    }
+
+    .service-desc h3 {
+        font-size: 18px;
+    }
+
+    .service-desc p {
+        font-size: 15px;
+    }
+
+    .testimonial-col {
+        flex-basis: 100%;
+    }
+
+    .user img {
+        width: 60px;
+    }
+
+    .user-info h4 {
+        font-size: 20px;
+    }
+
+    .user-info small {
+        font-size: 15px;
+    }
+
+    .user-info .fab {
+        font-size: 22px;
+    }
+
+    .testimonial-col p {
+        font-size: 14px;
+    }
+
+    .footer-img {
+        max-width: 320px;
+        top: 24%;
+    }
+
+    .footer-row {
+        width: 90%;
+    }
+
+    .footer-row h1 {
+        font-size: 25px;
+    }
+
+    .footer-row p {
+        font-size: 18px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-basis: 100%;
+    }
+
+    .footer-left .far,
+    .footer-right .fas {
+        font-size: 25px;
+    }
+
+    .social-links .fab {
+        height: 45px;
+        width: 45px;
+        font-size: 25px;
+        line-height: 45px;
+    }
+
+    .social-links p {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .logo {
+        width: 180px;
+        top: 4%;
+    }
+
+    .banner-text {
+        padding-top: 250px;
+    }
+
+    .banner-text h1 {
+        font-size: 75px;
+    }
+
+    .banner-btn a {
+        font-size: 18px;
+        width: 130px;
+    }
+
+    .popup {
+        width: 350px;
+        height: 500px;
+    }
+
+    .form-element {
+        width: 290px;
+    }
+
+    .popup .form h2 {
+        font-size: 25px;
+    }
+
+    .popup .form .form-element label {
+        font-size: 14px;
+    }
+
+    .popup .form .form-element input[type="text"],
+    .popup .form .form-element input[type="password"],
+    .popup .form .form-element input[type="datetime-local"] {
+        font-size: 16px;
+    }
+
+    .popup .form .form-element button {
+        height: 40px;
+        padding: 5px 0;
+        font-size: 20px;
+    }
+
+    .popup .close-btn {
+        font-size: 25px;
+        top: 15px;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+        line-height: 22px;
+        border-radius: 25px;
+    }
+
+    #menu-btn {
+        width: 45px;
+        height: 45px;
+        top: 20px;
+        right: 20px;
+    }
+
+    #menu-btn img {
+        margin-top: 12px;
+        width: 20px;
+    }
+
+    #sideNav {
+        padding-top: 65px;
+        font-size: 20px;
+    }
+
+    .title-text p {
+        font-size: 20px;
+    }
+
+    .title-text h1 {
+        font-size: 30px;
+    }
+
+    .features {
+        font-size: 80%;
+        flex-basis: 100%;
+    }
+
+    .features-icon .fas,
+    .features-icon .far {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    .features-img {
+        flex-basis: 100%;
+    }
+
+    .single-service {
+        flex-basis: 80%;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 17%;
+    }
+
+    .service-desc h3 {
+        font-size: 16px;
+    }
+
+    .service-desc p {
+        font-size: 12px;
+    }
+
+    .testimonial-col {
+        flex-basis: 100%;
+    }
+
+    .user img {
+        width: 60px;
+    }
+
+    .user-info h4 {
+        font-size: 20px;
+    }
+
+    .user-info small {
+        font-size: 15px;
+    }
+
+    .user-info .fab {
+        font-size: 22px;
+    }
+
+    .testimonial-col p {
+        font-size: 14px;
+    }
+
+    .footer-img {
+        max-width: 280px;
+        top: 24%;
+    }
+
+    .footer-row {
+        width: 90%;
+    }
+
+    .footer-row h1 {
+        font-size: 20px;
+    }
+
+    .footer-row p {
+        font-size: 16px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-basis: 100%;
+    }
+
+    .footer-left .far,
+    .footer-right .fas {
+        font-size: 20px;
+    }
+
+    .social-links .fab {
+        height: 40px;
+        width: 40px;
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    .social-links p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (device-width: 384px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 2) {
+
+    .logo {
+        width: 150px;
+        top: 4%;
+    }
+
+    .banner-text {
+        padding-top: 220px;
+    }
+
+    .banner-text h1 {
+        font-size: 50px;
+    }
+
+    .banner-text p {
+        font-size: 15px;
+        margin-bottom: -50px;
+    }
+
+    .banner-btn a {
+        padding: 5px 0;
+        font-size: 15px;
+        width: 100px;
+    }
+
+    .popup {
+        width: 300px;
+        height: 400px;
+    }
+
+    .form-element {
+        width: 240px;
+    }
+
+    .popup .form h2 {
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .popup .form .form-element label {
+        font-size: 12px;
+    }
+
+    .popup .form .form-element input[type="text"],
+    .popup .form .form-element input[type="password"],
+    .popup .form .form-element input[type="datetime-local"] {
+        margin-top: 5px;
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    .popup .form .form-element button {
+        height: 28px;
+        padding: auto;
+        font-size: 14px;
+    }
+
+    .popup .close-btn {
+        font-size: 25px;
+        top: 15px;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+        line-height: 22px;
+        border-radius: 25px;
+    }
+
+    #menu-btn {
+        width: 40px;
+        height: 40px;
+        top: 20px;
+        right: 20px;
+    }
+
+    #menu-btn img {
+        margin-top: 10px;
+        width: 18px;
+    }
+
+    #sideNav {
+        padding-top: 55px;
+        font-size: 18px;
+    }
+
+    .title-text p {
+        font-size: 16px;
+    }
+
+    .title-text h1 {
+        font-size: 23px;
+    }
+
+    .features {
+        font-size: 65%;
+        flex-basis: 100%;
+    }
+
+    .features-icon .fas,
+    .features-icon .far {
+        width: 40px;
+        height: 40px;
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    .features-img {
+        flex-basis: 100%;
+    }
+
+    .single-service {
+        flex-basis: 80%;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 18%;
+    }
+
+    .service-desc h3 {
+        font-size: 14px;
+    }
+
+    .service-desc p {
+        font-size: 10px;
+    }
+
+    .testimonial-col {
+        flex-basis: 100%;
+    }
+
+    .user img {
+        width: 45px;
+    }
+
+    .user-info h4 {
+        font-size: 15px;
+    }
+
+    .user-info small {
+        font-size: 12px;
+    }
+
+    .user-info .fab {
+        font-size: 18px;
+    }
+
+    .testimonial-col p {
+        font-size: 10px;
+    }
+
+    .footer-img {
+        max-width: 230px;
+        top: 24%;
+    }
+
+    .footer-row {
+        width: 90%;
+    }
+
+    .footer-row h1 {
+        font-size: 16px;
+    }
+
+    .footer-row p {
+        font-size: 14px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-basis: 100%;
+    }
+
+    .footer-left .far,
+    .footer-right .fas {
+        font-size: 18px;
+    }
+
+    .social-links .fab {
+        height: 30px;
+        width: 30px;
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .social-links p {
+        font-size: 14px;
+        line-height: 12px;
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .logo {
+        width: 150px;
+        top: 4%;
+    }
+
+    .banner-text {
+        padding-top: 300px;
+    }
+
+    .banner-text h1 {
+        font-size: 50px;
+    }
+
+    .banner-text p {
+        font-size: 15px;
+        margin-bottom: -50px;
+    }
+
+    .banner-btn a {
+        padding: 5px 0;
+        font-size: 15px;
+        width: 100px;
+    }
+
+    .popup {
+        width: 300px;
+        height: 400px;
+    }
+
+    .form-element {
+        width: 240px;
+    }
+
+    .popup .form h2 {
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .popup .form .form-element label {
+        font-size: 12px;
+    }
+
+    .popup .form .form-element input[type="text"],
+    .popup .form .form-element input[type="password"],
+    .popup .form .form-element input[type="datetime-local"] {
+        margin-top: 5px;
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    .popup .form .form-element button {
+        height: 28px;
+        padding: auto;
+        font-size: 14px;
+    }
+
+    .popup .close-btn {
+        font-size: 25px;
+        top: 15px;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+        line-height: 22px;
+        border-radius: 25px;
+    }
+
+    #menu-btn {
+        width: 40px;
+        height: 40px;
+        top: 25px;
+        right: 20px;
+    }
+
+    #menu-btn img {
+        margin-top: 10px;
+        width: 18px;
+    }
+
+    #sideNav {
+        padding-top: 55px;
+        font-size: 18px;
+    }
+
+    .title-text p {
+        font-size: 16px;
+    }
+
+    .title-text h1 {
+        font-size: 23px;
+    }
+
+    .features {
+        font-size: 65%;
+        flex-basis: 100%;
+    }
+
+    .features-icon .fas,
+    .features-icon .far {
+        width: 40px;
+        height: 40px;
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    .features-img {
+        flex-basis: 100%;
+    }
+
+    .single-service {
+        flex-basis: 80%;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 18%;
+    }
+
+    .service-desc h3 {
+        font-size: 14px;
+    }
+
+    .service-desc p {
+        font-size: 10px;
+    }
+
+    .testimonial-col {
+        flex-basis: 100%;
+    }
+
+    .user img {
+        width: 45px;
+    }
+
+    .user-info h4 {
+        font-size: 15px;
+    }
+
+    .user-info small {
+        font-size: 12px;
+    }
+
+    .user-info .fab {
+        font-size: 18px;
+    }
+
+    .testimonial-col p {
+        font-size: 10px;
+    }
+
+    .footer-img {
+        max-width: 230px;
+        top: 24%;
+    }
+
+    .footer-row {
+        width: 90%;
+    }
+
+    .footer-row h1 {
+        font-size: 16px;
+    }
+
+    .footer-row p {
+        font-size: 14px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-basis: 100%;
+    }
+
+    .footer-left .far,
+    .footer-right .fas {
+        font-size: 18px;
+    }
+
+    .social-links .fab {
+        height: 30px;
+        width: 30px;
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .social-links p {
+        font-size: 14px;
+        line-height: 12px;
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .logo {
+        width: 150px;
+        top: 4%;
+    }
+
+    .banner-text {
+        padding-top: 250px;
+    }
+
+    .banner-text h1 {
+        font-size: 50px;
+    }
+
+    .banner-text p {
+        font-size: 15px;
+        margin-bottom: -50px;
+    }
+
+    .banner-btn a {
+        padding: 5px 0;
+        font-size: 15px;
+        width: 100px;
+    }
+
+    #menu-btn {
+        width: 40px;
+        height: 40px;
+        top: 25px;
+        right: 20px;
+    }
+
+    #menu-btn img {
+        margin-top: 10px;
+        width: 18px;
+    }
+
+    #sideNav {
+        padding-top: 55px;
+        font-size: 18px;
+    }
+
+    .title-text p {
+        font-size: 16px;
+    }
+
+    .title-text h1 {
+        font-size: 23px;
+    }
+
+    .features {
+        font-size: 65%;
+        flex-basis: 100%;
+    }
+
+    .features-icon .fas,
+    .features-icon .far {
+        width: 40px;
+        height: 40px;
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    .features-img {
+        flex-basis: 100%;
+    }
+
+    .single-service {
+        flex-basis: 80%;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 18%;
+    }
+
+    .service-desc h3 {
+        font-size: 14px;
+    }
+
+    .service-desc p {
+        font-size: 10px;
+    }
+
+    .testimonial-col {
+        flex-basis: 100%;
+    }
+
+    .user img {
+        width: 45px;
+    }
+
+    .user-info h4 {
+        font-size: 15px;
+    }
+
+    .user-info small {
+        font-size: 12px;
+    }
+
+    .user-info .fab {
+        font-size: 18px;
+    }
+
+    .testimonial-col p {
+        font-size: 10px;
+    }
+
+    .footer-img {
+        max-width: 230px;
+        top: 24%;
+    }
+
+    .footer-row {
+        width: 90%;
+    }
+
+    .footer-row h1 {
+        font-size: 16px;
+    }
+
+    .footer-row p {
+        font-size: 14px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-basis: 100%;
+    }
+
+    .footer-left .far,
+    .footer-right .fas {
+        font-size: 18px;
+    }
+
+    .social-links .fab {
+        height: 30px;
+        width: 30px;
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .social-links p {
+        font-size: 14px;
+        line-height: 12px;
+    }
+}
+
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) {
+
+    .logo {
+        width: 150px;
+        top: 4%;
+    }
+
+    .banner-text {
+        padding-top: 250px;
+    }
+
+    .banner-text h1 {
+        font-size: 50px;
+    }
+
+    .banner-text p {
+        font-size: 15px;
+        margin-bottom: -50px;
+    }
+
+    .banner-btn a {
+        padding: 5px 0;
+        font-size: 15px;
+        width: 100px;
+    }
+
+    .popup {
+        width: 300px;
+        height: 400px;
+    }
+
+    .form-element {
+        width: 240px;
+    }
+
+    .popup .form h2 {
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .popup .form .form-element label {
+        font-size: 12px;
+    }
+
+    .popup .form .form-element input[type="text"],
+    .popup .form .form-element input[type="password"],
+    .popup .form .form-element input[type="datetime-local"] {
+        margin-top: 5px;
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    .popup .form .form-element button {
+        height: 28px;
+        padding: auto;
+        font-size: 14px;
+    }
+
+    .popup .close-btn {
+        font-size: 25px;
+        top: 15px;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+        line-height: 22px;
+        border-radius: 25px;
+    }
+
+    #menu-btn {
+        width: 40px;
+        height: 40px;
+        top: 25px;
+        right: 20px;
+    }
+
+    #menu-btn img {
+        margin-top: 10px;
+        width: 18px;
+    }
+
+    #sideNav {
+        padding-top: 55px;
+        font-size: 18px;
+    }
+
+    .title-text p {
+        font-size: 16px;
+    }
+
+    .title-text h1 {
+        font-size: 23px;
+    }
+
+    .features {
+        font-size: 65%;
+        flex-basis: 100%;
+    }
+
+    .features-icon .fas,
+    .features-icon .far {
+        width: 40px;
+        height: 40px;
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    .features-img {
+        flex-basis: 100%;
+    }
+
+    .single-service {
+        flex-basis: 80%;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 18%;
+    }
+
+    .service-desc h3 {
+        font-size: 14px;
+    }
+
+    .service-desc p {
+        font-size: 10px;
+    }
+
+    .testimonial-col {
+        flex-basis: 100%;
+    }
+
+    .user img {
+        width: 45px;
+    }
+
+    .user-info h4 {
+        font-size: 15px;
+    }
+
+    .user-info small {
+        font-size: 12px;
+    }
+
+    .user-info .fab {
+        font-size: 18px;
+    }
+
+    .testimonial-col p {
+        font-size: 10px;
+    }
+
+    .footer-img {
+        max-width: 230px;
+        top: 24%;
+    }
+
+    .footer-row {
+        width: 90%;
+    }
+
+    .footer-row h1 {
+        font-size: 16px;
+    }
+
+    .footer-row p {
+        font-size: 14px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-basis: 100%;
+    }
+
+    .footer-left .far,
+    .footer-right .fas {
+        font-size: 18px;
+    }
+
+    .social-links .fab {
+        height: 30px;
+        width: 30px;
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .social-links p {
+        font-size: 14px;
+        line-height: 12px;
+    }
+}
+
+@media screen and (device-width: 360px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 2) {
+
+    .logo {
+        width: 150px;
+        top: 4%;
+    }
+
+    .banner-text {
+        padding-top: 250px;
+    }
+
+    .banner-text h1 {
+        font-size: 50px;
+    }
+
+    .banner-text p {
+        font-size: 15px;
+        margin-bottom: -50px;
+    }
+
+    .banner-btn a {
+        padding: 5px 0;
+        font-size: 15px;
+        width: 100px;
+    }
+
+    .popup {
+        width: 300px;
+        height: 400px;
+    }
+
+    .form-element {
+        width: 240px;
+    }
+
+    .popup .form h2 {
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .popup .form .form-element label {
+        font-size: 12px;
+    }
+
+    .popup .form .form-element input[type="text"],
+    .popup .form .form-element input[type="password"],
+    .popup .form .form-element input[type="datetime-local"] {
+        margin-top: 5px;
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    .popup .form .form-element button {
+        height: 28px;
+        padding: auto;
+        font-size: 14px;
+    }
+
+    .popup .close-btn {
+        font-size: 25px;
+        top: 15px;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+        line-height: 22px;
+        border-radius: 25px;
+    }
+
+    #menu-btn {
+        width: 40px;
+        height: 40px;
+        top: 25px;
+        right: 20px;
+    }
+
+    #menu-btn img {
+        margin-top: 10px;
+        width: 18px;
+    }
+
+    #sideNav {
+        padding-top: 55px;
+        font-size: 18px;
+    }
+
+    .title-text p {
+        font-size: 16px;
+    }
+
+    .title-text h1 {
+        font-size: 23px;
+    }
+
+    .features {
+        font-size: 65%;
+        flex-basis: 100%;
+    }
+
+    .features-icon .fas,
+    .features-icon .far {
+        width: 40px;
+        height: 40px;
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    .features-img {
+        flex-basis: 100%;
+    }
+
+    .single-service {
+        flex-basis: 80%;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 18%;
+    }
+
+    .service-desc h3 {
+        font-size: 14px;
+    }
+
+    .service-desc p {
+        font-size: 10px;
+    }
+
+    .testimonial-col {
+        flex-basis: 100%;
+    }
+
+    .user img {
+        width: 45px;
+    }
+
+    .user-info h4 {
+        font-size: 15px;
+    }
+
+    .user-info small {
+        font-size: 12px;
+    }
+
+    .user-info .fab {
+        font-size: 18px;
+    }
+
+    .testimonial-col p {
+        font-size: 10px;
+    }
+
+    .footer-img {
+        max-width: 230px;
+        top: 24%;
+    }
+
+    .footer-row {
+        width: 90%;
+    }
+
+    .footer-row h1 {
+        font-size: 16px;
+    }
+
+    .footer-row p {
+        font-size: 14px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-basis: 100%;
+    }
+
+    .footer-left .far,
+    .footer-right .fas {
+        font-size: 18px;
+    }
+
+    .social-links .fab {
+        height: 30px;
+        width: 30px;
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .social-links p {
+        font-size: 14px;
+        line-height: 12px;
+    }
+}
+
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) {
+
+    .logo {
+        width: 150px;
+        top: 4%;
+    }
+
+    .banner-text {
+        padding-top: 250px;
+    }
+
+    .banner-text h1 {
+        font-size: 50px;
+    }
+
+    .banner-text p {
+        font-size: 15px;
+        margin-bottom: -50px;
+    }
+
+    .banner-btn a {
+        padding: 5px 0;
+        font-size: 15px;
+        width: 100px;
+    }
+
+    .popup {
+        width: 275px;
+        height: 400px;
+    }
+
+    .form-element {
+        width: 220px;
+    }
+
+    .popup .form h2 {
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .popup .form .form-element label {
+        font-size: 12px;
+    }
+
+    .popup .form .form-element input[type="text"],
+    .popup .form .form-element input[type="password"],
+    .popup .form .form-element input[type="datetime-local"] {
+        margin-top: 5px;
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    .popup .form .form-element button {
+        height: 28px;
+        padding: auto;
+        font-size: 14px;
+    }
+
+    .popup .close-btn {
+        font-size: 25px;
+        top: 15px;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+        line-height: 22px;
+        border-radius: 25px;
+    }
+
+    #menu-btn {
+        width: 40px;
+        height: 40px;
+        top: 25px;
+        right: 20px;
+    }
+
+    #menu-btn img {
+        margin-top: 10px;
+        width: 18px;
+    }
+
+    #sideNav {
+        padding-top: 55px;
+        font-size: 18px;
+    }
+
+    .title-text p {
+        font-size: 16px;
+    }
+
+    .title-text h1 {
+        font-size: 23px;
+    }
+
+    .features {
+        font-size: 65%;
+        flex-basis: 100%;
+    }
+
+    .features-icon .fas,
+    .features-icon .far {
+        width: 40px;
+        height: 40px;
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    .features-img {
+        flex-basis: 100%;
+    }
+
+    .single-service {
+        flex-basis: 80%;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 18%;
+    }
+
+    .service-desc h3 {
+        font-size: 12px;
+    }
+
+    .service-desc p {
+        font-size: 9px;
+    }
+
+    .testimonial-col {
+        flex-basis: 100%;
+    }
+
+    .user img {
+        width: 45px;
+    }
+
+    .user-info h4 {
+        font-size: 15px;
+    }
+
+    .user-info small {
+        font-size: 12px;
+    }
+
+    .user-info .fab {
+        font-size: 18px;
+    }
+
+    .testimonial-col p {
+        font-size: 10px;
+    }
+
+    .footer-img {
+        max-width: 210px;
+        top: 23%;
+    }
+
+    .footer-row {
+        width: 90%;
+    }
+
+    .footer-row h1 {
+        font-size: 16px;
+    }
+
+    .footer-row p {
+        margin: 0 -20px;
+        font-size: 13px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-basis: 100%;
+    }
+
+    .footer-left .far,
+    .footer-right .fas {
+        font-size: 16px;
+    }
+
+    .social-links .fab {
+        height: 30px;
+        width: 30px;
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .social-links p {
+        font-size: 14px;
+        line-height: 12px;
+    }
+}
+
+@media screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2) {
+
+    .logo {
+        width: 130px;
+        top: 4%;
+    }
+
+    .banner-text {
+        padding-top: 200px;
+    }
+
+    .banner-text h1 {
+        font-size: 40px;
+    }
+
+    .banner-text p {
+        font-size: 13px;
+        margin-bottom: -50px;
+    }
+
+    .banner-btn a {
+        padding: 5px 0;
+        font-size: 12px;
+        width: 80px;
+    }
+
+    .popup {
+        padding: 10px 30px;
+        width: 275px;
+        height: 350px;
+    }
+
+    .form-element {
+        margin: 5px 0 !important;
+        width: 220px;
+    }
+
+    .popup .form h2 {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+
+    .popup .form .form-element label {
+        font-size: 10px;
+    }
+
+    .popup .form .form-element input[type="text"],
+    .popup .form .form-element input[type="password"],
+    .popup .form .form-element input[type="datetime-local"] {
+        margin-top: 5px;
+        padding: 5px;
+        font-size: 8px;
+    }
+
+    .popup .form .form-element button {
+        margin-top: 8px;
+        height: 28px;
+        padding: auto;
+        font-size: 14px;
+    }
+
+    .popup .close-btn {
+        font-size: 25px;
+        top: 15px;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+        line-height: 22px;
+        border-radius: 25px;
+    }
+
+    #menu-btn {
+        width: 30px;
+        height: 30px;
+        top: 20px;
+        right: 15px;
+    }
+
+    #menu-btn img {
+        margin-top: 8px;
+        width: 15px;
+    }
+
+    #sideNav {
+        padding-top: 35px;
+        font-size: 15px;
+    }
+
+    .title-text p {
+        font-size: 14px;
+    }
+
+    .title-text h1 {
+        font-size: 20px;
+    }
+
+    .features {
+        font-size: 65%;
+        flex-basis: 100%;
+    }
+
+    .features-icon .fas,
+    .features-icon .far {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .features-img {
+        flex-basis: 100%;
+    }
+
+    .single-service {
+        flex-basis: 80%;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 18%;
+    }
+
+    .service-desc h3 {
+        font-size: 12px;
+    }
+
+    .service-desc p {
+        font-size: 9px;
+    }
+
+    .testimonial-col {
+        flex-basis: 100%;
+    }
+
+    .user img {
+        width: 45px;
+    }
+
+    .user-info h4 {
+        font-size: 15px;
+    }
+
+    .user-info small {
+        font-size: 12px;
+    }
+
+    .user-info .fab {
+        font-size: 18px;
+    }
+
+    .testimonial-col p {
+        font-size: 10px;
+    }
+
+    .footer-img {
+        max-width: 210px;
+        top: 23%;
+    }
+
+    .footer-row {
+        width: 90%;
+    }
+
+    .footer-row h1 {
+        font-size: 16px;
+    }
+
+    .footer-row p {
+        margin: 0 -20px;
+        font-size: 13px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-basis: 100%;
+    }
+
+    .footer-left .far,
+    .footer-right .fas {
+        font-size: 16px;
+    }
+
+    .social-links .fab {
+        height: 30px;
+        width: 30px;
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .social-links p {
+        font-size: 14px;
+        line-height: 12px;
+    }
+}
+
+@media (max-device-width: 218px) and (max-device-height: 281px) {
+
+    .logo {
+        width: 100px;
+        top: 4%;
+    }
+
+    .banner-text {
+        padding-top: 100px;
+    }
+
+    .banner-text h1 {
+        font-size: 30px;
+    }
+
+    .banner-text p {
+        font-size: 10px;
+        margin-bottom: -55px;
+    }
+
+    .banner-btn a {
+        padding: 4px 0;
+        font-size: 10px;
+        width: 60px;
+    }
+
+    .popup {
+        margin-top: 15px;
+        padding: 10px 15px;
+        width: 180px;
+        height: 220px;
+    }
+
+    .form-element {
+        margin: -5px 0 !important;
+        width: 152px;
+    }
+
+    .popup .form h2 {
+        margin: 0 0;
+        font-size: 12px;
+    }
+
+    .popup .form .form-element label {
+        font-size: 7px;
+    }
+
+    .popup .form .form-element input[type="text"],
+    .popup .form .form-element input[type="password"],
+    .popup .form .form-element input[type="datetime-local"] {
+        margin-top: 0px;
+        padding: 3px;
+        font-size: 7px;
+    }
+
+    .popup .form .form-element button {
+        margin-top: 10px;
+        height: 25px;
+        padding: auto;
+        font-size: 10px;
+    }
+
+    .popup .close-btn {
+        font-size: 18px;
+        top: 8px;
+        right: 12px;
+        width: 14px;
+        height: 14px;
+        line-height: 15px;
+        border-radius: 25px;
+    }
+
+    #menu-btn {
+        width: 25px;
+        height: 25px;
+        top: 12px;
+        right: 12px;
+    }
+
+    #menu-btn img {
+        margin-top: 5px;
+        width: 12px;
+    }
+
+    #sideNav {
+        padding-top: 20px;
+        width: 90px;
+        font-size: 10px;
+    }
+
+    nav ul li {
+        margin: 25px 20px;
+    }
+
+    .title-text p {
+        font-size: 10px;
+    }
+
+    .title-text h1 {
+        font-size: 15px;
+    }
+
+    .title-text p::after {
+        top: -10px;
+        width: 25px;
+        height: 20px;
+    }
+
+    .features {
+        font-size: 45%;
+        flex-basis: 100%;
+    }
+
+    .features-icon .fas,
+    .features-icon .far {
+        width: 18px;
+        height: 17px;
+        font-size: 11px;
+        line-height: 15px;
+        border-radius: 3px;
+    }
+
+    .features-img {
+        flex-basis: 100%;
+    }
+
+    .single-service {
+        flex-basis: 80%;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 18%;
+    }
+
+    .service-desc h3 {
+        font-size: 8px;
+    }
+
+    .service-desc p {
+        font-size: 7px;
+    }
+
+    hr {
+        margin: 3px auto;
+    }
+
+    .testimonial-col {
+        flex-basis: 100%;
+    }
+
+    .user img {
+        width: 25px;
+    }
+
+    .user-info h4 {
+        font-size: 10px;
+        margin-bottom: -8px;
+    }
+
+    .user-info small {
+        font-size: 8px;
+    }
+
+    .user-info .fab {
+        font-size: 12px;
+    }
+
+    .testimonial-col p {
+        font-size: 8px;
+    }
+
+    .footer-img {
+        max-width: 160px;
+        top: 23%;
+    }
+
+    .footer-row {
+        width: 90%;
+    }
+
+    .footer-row h1 {
+        font-size: 12px;
+    }
+
+    .footer-row p {
+        margin: 0 -20px;
+        font-size: 9px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-basis: 100%;
+    }
+
+    .footer-left .far,
+    .footer-right .fas {
+        font-size: 12px;
+    }
+
+    .social-links .fab {
+        height: 25px;
+        width: 25px;
+        font-size: 10px;
+        line-height: 25px;
+    }
+
+    .social-links p {
+        font-size: 12px;
+        line-height: 10px;
+    }
+}
